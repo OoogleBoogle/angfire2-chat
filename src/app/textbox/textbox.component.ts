@@ -9,13 +9,25 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 })
 export class TextboxComponent implements OnInit {
   private messages: FirebaseListObservable<any[]>
-  constructor(private af: AngularFire) { }
+  public userName: string; 
+  public avatar: string;
+
+  constructor(private af: AngularFire) {
+    this.af.auth.subscribe(user => { 
+      this.userName = user.auth.displayName;
+      this.avatar = user.auth.photoURL;
+    });
+   }
 
   ngOnInit() {
-    this.messages = this.af.database.list('/messages');
+    this.messages = this.af.database.list('/messages');    
   }
 
   send(text: string) {
-    this.messages.push({text: text});
+    this.messages.push({
+      text: text,
+      userName: this.userName,
+      avatar: this.avatar
+    });
   }
 }
