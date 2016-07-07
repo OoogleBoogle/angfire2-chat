@@ -1,5 +1,8 @@
-<div class="message" *ngFor="let message of messages | async">
-  <img src="{{message.avatar}}" alt="avatar">
-  <p>{{message.userName}}:</p>
-  <p>{{message.text}}</p>
+<div class="message-container" *ngFor="let message of messages | async">
+  <div class="avatar">
+    <img src="{{message.avatar}}" alt="avatar">
+  </div>
+  <div class="message">
+    <p>{{message.text}}</p>
+  </div>
 </div>
