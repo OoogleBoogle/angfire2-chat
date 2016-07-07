@@ -3,5 +3,11 @@
     height: 50vh;
     margin: 0 auto;
     overflow: scroll;
-    width: 70%;
+    width: 100%;
+}
+
+@media screen and (min-width: 30em) {
+    .message-container {
+        width: 70%;
+    }
 }
