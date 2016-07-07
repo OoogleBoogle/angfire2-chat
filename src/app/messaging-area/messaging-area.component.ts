@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewChecked } from '@angular/core';
 import { TextboxComponent, MessageBoxComponent } from '../shared'
 
 @Component({
@@ -8,4 +8,9 @@ import { TextboxComponent, MessageBoxComponent } from '../shared'
   styleUrls: ['messaging-area.component.css'],
   directives: [TextboxComponent, MessageBoxComponent]
 })
-export class MessagingAreaComponent { }
+export class MessagingAreaComponent implements AfterViewChecked {
+  ngAfterViewChecked() {
+    let container = document.querySelector('.message-container');
+    container.scrollTop = container.scrollHeight;
+  }
+ }
