@@ -1,6 +1,6 @@
 .message-container {
-    border-top: 1px solid #555;
-    border-bottom: 1px solid #555;
+    border-top: 5px solid #555;
+    border-bottom: 5px solid #555;
     height: 50vh;
     margin: 0 auto;
     overflow-y: auto;
@@ -10,6 +10,6 @@
 @media screen and (min-width: 30em) {
     .message-container {
         width: 70%;
-        border: 1px solid black;
+        border: 5px solid #555;
     }
 }
