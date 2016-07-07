@@ -1,0 +1,25 @@
+.message {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px 5px;
+    padding: .2em;
+    text-align: center;
+    width: 70%;
+}
+
+.message > img {
+    display: none;
+}
+
+
+@media screen and (min-width: 30em) {
+    .message {
+        width: 50%;
+    }
+    .message > img {
+        border-radius: 50px;
+        display: block;
+        float: left;
+        margin-left: 1.1em;
+    }
+}

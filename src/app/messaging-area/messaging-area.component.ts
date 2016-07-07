@@ -8,11 +8,4 @@ import { TextboxComponent, MessageBoxComponent } from '../shared'
   styleUrls: ['messaging-area.component.css'],
   directives: [TextboxComponent, MessageBoxComponent]
 })
-export class MessagingAreaComponent implements OnInit {
-
-  constructor() {}
-
-  ngOnInit() {
-  }
-
-}
+export class MessagingAreaComponent { }
