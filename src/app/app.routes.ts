@@ -12,7 +12,7 @@ export const routes: RouterConfig = [
     },
     {
         path: '',
-        component: LoginComponent
+        redirectTo: 'login',
     }
 ]
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFire, AngularFireAuth } from 'angularfire2';
+import { AngularFire } from 'angularfire2';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,10 +14,16 @@ export class LoginComponent implements OnInit {
               public router: Router) {}
 
   ngOnInit() {
-    this.af.auth.subscribe(user => {
-      if (user) {
-        this.router.navigate(['/chat']);
-      }
-    })
+    if (this.af.auth) {
+      this.af.auth.subscribe(user => {
+        if (user) {
+          this.router.navigate(['/chat']);
+        }
+      })
+    }
+  }
+
+  login() {
+    this.af.auth.login();
   }
 }
