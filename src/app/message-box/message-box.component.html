@@ -1,8 +1,8 @@
-<div class="message-container" *ngFor="let message of messages | async">
-  <div class="avatar">
+<div class="message-container" [class.not-me-container]="message.userName === userID" *ngFor="let message of messages | async">
+  <div class="avatar" [class.not-me-image]="message.userName !== userID">
     <img src="{{message.avatar}}" alt="avatar">
   </div>
-  <div class="message">
+  <div class="message" [class.not-me-message]="message.userName !== userID">
     <p>{{message.text}}</p>
   </div>
 </div>

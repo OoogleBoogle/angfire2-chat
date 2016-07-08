@@ -20,12 +20,10 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
     this.af.auth.subscribe(user => {
       if (user)  {
-        console.log("There's a user", user);
         this.userName = user.auth.displayName;
         this.avatar = user.auth.photoURL;
         this.router.navigate(['/chat'])
       } else {
-        console.log("No User", user);
         this.router.navigate(['/login']);
       }
     });
