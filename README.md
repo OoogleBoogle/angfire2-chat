@@ -6,8 +6,8 @@ This is the first app I've built using Angular 2 and Firebase (angularfire2), in
 
 ### Todos
 
-1) There's a bug at login that doesn't redirect to the chat page. Currently the user needs to refresh after logging in.
-2) Make it look a whole lot nicer!!!
+1. There's a bug at login that doesn't redirect to the chat page. Currently the user needs to refresh after logging in.
+2. Make it look a whole lot nicer!!!
 
 ### Hosting
 
