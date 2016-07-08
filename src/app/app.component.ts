@@ -10,31 +10,9 @@ import { NavbarComponent } from './shared';
   styleUrls: ['app.component.css'],
   directives: [ROUTER_DIRECTIVES, NavbarComponent]
 })
-export class AppComponent implements OnInit, AfterViewInit {
-  title = 'Stupid Message Thing';
-  private loggedIn: boolean;
-
+export class AppComponent {   
   constructor(
-    private af: AngularFire,
-    private router: Router) {}
-    
-  ngOnInit() {
-    console.log("Init fired");
-    
-    this.af.auth.subscribe(user => {
-      if (user) {
-        this.loggedIn = true;
-      }
-      else {
-        this.loggedIn = false;
-        this.router.navigate(['/login'])
-      }
-    });
-  }
+    public af: AngularFire,
+    private router: Router) { }
 
-  ngAfterViewInit() {
-    if (this.loggedIn) {
-      this.router.navigate(['/chat']);
-    }
-  }
 }

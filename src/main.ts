@@ -24,7 +24,7 @@ bootstrap(AppComponent, [
   }),
   firebaseAuthConfig({
     provider: AuthProviders.Google,
-    method: AuthMethods.Popup,
+    method: AuthMethods.Redirect,
     remember: 'default',
     scope: ['https://www.googleapis.com/auth/plus.login']
   })

@@ -5,5 +5,5 @@
   </div>
   <p *ngIf="af.auth | async">{{userName}} | </p>
   <button class="signup" *ngIf="!(af.auth | async)" (click)="signup()">Sign Up | Log In</button>
-  <button *ngIf="af.auth | async" class="logout" (click)="af.auth.logout()">Logout</button>
+  <button *ngIf="af.auth | async" class="logout" (click)="logout()">Logout</button>
 </nav>

@@ -9,8 +9,11 @@ import { TextboxComponent, MessageBoxComponent } from '../shared'
   directives: [TextboxComponent, MessageBoxComponent]
 })
 export class MessagingAreaComponent implements AfterViewChecked {
+
+  constructor() {}
+
   ngAfterViewChecked() {
     let container = document.querySelector('.message-container');
     container.scrollTop = container.scrollHeight;
   }
- }
+}

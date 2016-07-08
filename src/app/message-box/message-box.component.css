@@ -32,6 +32,12 @@
     }
 
     .message-container {
-        margin-right: 15em;
+        margin-right: 10%;
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .message-container {
+        margin-right: 19%;
     }
 }

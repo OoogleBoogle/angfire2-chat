@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AngularFire } from 'angularfire2';
 import { Router } from '@angular/router';
 
@@ -8,22 +8,8 @@ import { Router } from '@angular/router';
   templateUrl: 'login.component.html',
   styleUrls: ['login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
-  constructor(public af: AngularFire,
-              public router: Router) {}
+  constructor() {}
 
-  ngOnInit() {
-    if (this.af.auth) {
-      this.af.auth.subscribe(user => {
-        if (user) {
-          this.router.navigate(['/chat']);
-        }
-      })
-    }
-  }
-
-  login() {
-    this.af.auth.login();
-  }
 }
