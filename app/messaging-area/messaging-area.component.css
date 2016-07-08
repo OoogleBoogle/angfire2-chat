@@ -1,0 +1,15 @@
+.message-container {
+    border-top: 5px solid #555;
+    border-bottom: 5px solid #555;
+    height: 50vh;
+    margin: 0 auto;
+    overflow-y: auto;
+    width: 100%;
+}
+
+@media screen and (min-width: 30em) {
+    .message-container {
+        width: 70%;
+        border: 5px solid #555;
+    }
+}

@@ -1,0 +1,9 @@
+<nav>
+  <h1>{{title}}</h1>
+  <div class="nav-avatar" *ngIf="af.auth | async">
+    <img src="{{avatar}}" alt="avatar">
+  </div>
+  <p *ngIf="af.auth | async">{{userName}} | </p>
+  <button class="signup" *ngIf="!(af.auth | async)" (click)="signup()">Sign Up | Log In</button>
+  <button *ngIf="af.auth | async" class="logout" (click)="logout()">Logout</button>
+</nav>
