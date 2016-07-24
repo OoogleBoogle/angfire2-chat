@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AngularFire } from 'angularfire2';
 import { Router } from '@angular/router';
 
@@ -19,15 +19,18 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
     this.af.auth.subscribe(user => {
+      console.log(user);
       if (user)  {
         this.userName = user.auth.displayName;
         this.avatar = user.auth.photoURL;
-        this.router.navigate(['/chat'])
-      } else {
+        this.router.navigate(['/chat']);
+      } 
+      else {
         this.router.navigate(['/login']);
       }
     });
   }
+
 
   signup() {
     this.af.auth.login();

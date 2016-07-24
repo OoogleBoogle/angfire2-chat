@@ -1,6 +1,4 @@
-import { Component } from '@angular/core';
-import { AngularFire } from 'angularfire2';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -8,8 +6,4 @@ import { Router } from '@angular/router';
   templateUrl: 'login.component.html',
   styleUrls: ['login.component.css']
 })
-export class LoginComponent {
-
-  constructor() {}
-
-}
+export class LoginComponent {}
