@@ -1,18 +1,21 @@
 import { bootstrap } from '@angular/platform-browser-dynamic';
 import { enableProdMode } from '@angular/core';
-import { AppComponent, environment } from './app/';
-import { APP_ROUTER_PROVIDER } from './app/app.routes';
+import { disableDeprecatedForms, provideForms } from '@angular/forms';
 import { AuthMethods, 
          AuthProviders,
          FIREBASE_PROVIDERS, 
          firebaseAuthConfig,
          defaultFirebase } from 'angularfire2';
+import { AppComponent, environment } from './app/';
+import { APP_ROUTER_PROVIDER } from './app/app.routes';
 
 if (environment.production) {
   enableProdMode();
 }
 
 bootstrap(AppComponent, [
+  disableDeprecatedForms(),
+  provideForms(),
   APP_ROUTER_PROVIDER,
   FIREBASE_PROVIDERS,
   // Initialize Firebase app  

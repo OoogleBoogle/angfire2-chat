@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  public title: string = "Stupid Chat Thing";
+  public title: string = "Chatster";
   public userName: string;
   public avatar: string;
 
@@ -19,7 +19,6 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
     this.af.auth.subscribe(user => {
-      console.log(user);
       if (user)  {
         this.userName = user.auth.displayName;
         this.avatar = user.auth.photoURL;
